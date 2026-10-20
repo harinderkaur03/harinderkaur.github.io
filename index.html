@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Harinder Kaur</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Harinder Kaur, Technical Product Manager for onboarding, identity verification, KYC and credit risk in regulated fintech. Open to Senior PM roles in Dubai and Abu Dhabi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one 1080px column; hero splits into thesis + "fit check" card; case studies are full-width bands with a diagram each */
+:root{
+  --bg:#FFFFFF; --surface:#F4F7FB; --ink:#0F1F3D; --muted:#52607A; --line:#DCE3EC;
+  --accent:#1B3A6B; --accent-soft:#E6EEF7; --gold:#0B7F8A; --gold-soft:#DDF3F4;
+  --ok:#0E9AA7;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A1428; --surface:#101D36; --ink:#E6ECF5; --muted:#9AA8BF; --line:#22324F;
+  --accent:#8DB8F0; --accent-soft:#16294A; --gold:#4CCFD8; --gold-soft:#10353D; --ok:#4CCFD8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A1428; --surface:#101D36; --ink:#E6ECF5; --muted:#9AA8BF; --line:#22324F;
+  --accent:#8DB8F0; --accent-soft:#16294A; --gold:#4CCFD8; --gold-soft:#10353D; --ok:#4CCFD8; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin:0 auto;padding-block:40px 64px;display:grid;gap:72px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.3rem;font-weight:700}
+p{margin:0;max-width:65ch}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.label{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono)}
+
+/* top bar */
+.top{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+.status{display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);color:var(--ink);
+  padding:6px 12px;border-radius:999px;font-size:.85rem;font-weight:500}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 60%,transparent)}70%{box-shadow:0 0 0 8px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.toplinks{display:flex;gap:16px;font-size:.9rem}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:40px;align-items:center}
+.hero-text{display:grid;gap:20px;min-width:0}
+.id{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.photo{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--surface);box-shadow:0 0 0 2px var(--ok);flex:none}
+.id-text{display:grid;gap:8px;min-width:0}
+.role{font-family:var(--display);font-weight:500;font-size:clamp(1.15rem,2.2vw,1.45rem);color:var(--accent)}
+.lede{font-size:1.1rem;color:var(--muted)}
+.lede strong{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;font-weight:600;font-size:.95rem;
+  text-decoration:none;border:1px solid var(--accent);cursor:pointer;font-family:var(--body)}
+.btn.primary{background:var(--accent);color:var(--surface)}
+.btn.ghost{background:transparent;color:var(--accent)}
+
+/* fit check card */
+.check{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:14px;min-width:0}
+.check-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:12px}
+.check-row{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start}
+.check-row svg{margin-top:3px}
+.check-row b{display:block;font-size:.8rem;font-family:var(--mono);font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.check-row span{font-size:.95rem}
+.verdict{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--gold-soft);border-radius:8px;padding:10px 14px;font-weight:600;flex-wrap:wrap}
+.verdict .mono{font-size:.8rem;color:var(--gold)}
+.tick{animation:draw .6s ease-out both}
+.check-row:nth-child(3) .tick{animation-delay:.15s}.check-row:nth-child(4) .tick{animation-delay:.3s}
+.check-row:nth-child(5) .tick{animation-delay:.45s}.check-row:nth-child(6) .tick{animation-delay:.6s}
+@keyframes draw{from{stroke-dashoffset:20}to{stroke-dashoffset:0}}
+
+/* numbers */
+.numbers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.num{padding:20px 16px 20px 0;display:grid;gap:4px;min-width:0}
+.num+.num{padding-left:16px;border-left:1px solid var(--line)}
+.num strong{font-family:var(--display);font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+.num span{font-size:.9rem;color:var(--muted)}
+
+/* section heads */
+.sec{display:grid;gap:28px}
+.sec-head{display:grid;gap:10px}
+
+/* why uae */
+.bridge{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.bridge-item{display:grid;gap:10px;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:12px;align-content:start;min-width:0}
+.pair{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-family:var(--mono);font-size:.82rem}
+.chip{padding:3px 8px;border-radius:6px;background:var(--accent-soft)}
+.chip.gold{background:var(--gold-soft)}
+.arrow{color:var(--muted)}
+.bridge-item p{font-size:.95rem;color:var(--muted)}
+
+/* case studies */
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;padding-block:32px;border-top:1px solid var(--line)}
+.case:first-of-type{border-top:0;padding-top:0}
+.case-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.case-text{display:grid;gap:16px;align-content:start;min-width:0}
+.case-text h4{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 4px;font-weight:500}
+.case-text ul{margin:0;padding-left:18px;display:grid;gap:4px;max-width:65ch}
+.case-visual{display:grid;gap:16px;align-content:start;min-width:0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:14px;min-width:0}
+.outcomes{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.outcome strong{display:block;font-family:var(--display);font-size:1.7rem;font-weight:800;color:var(--accent);line-height:1.1;font-variant-numeric:tabular-nums}
+.outcome span{font-size:.85rem;color:var(--muted)}
+
+/* pipeline */
+.pipe{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch}
+.step{flex:1 1 84px;min-width:0;padding:10px;border-radius:8px;background:var(--accent-soft);font-size:.82rem;display:grid;gap:2px}
+.step b{font-family:var(--mono);font-weight:500;font-size:.7rem;color:var(--muted);letter-spacing:.05em}
+.step.score{background:var(--gold-soft)}
+
+/* comparison table */
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem;min-width:320px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-weight:500;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+/* bars */
+.bar{display:grid;gap:6px}
+.bar-top{display:flex;justify-content:space-between;gap:12px;font-size:.85rem;flex-wrap:wrap}
+.track{position:relative;height:12px;border-radius:6px;background:var(--line);overflow:hidden}
+.fill{position:absolute;top:0;bottom:0;border-radius:6px;background:var(--accent)}
+.fill.gold{background:var(--gold)}
+.fill.range{background:repeating-linear-gradient(90deg,var(--accent) 0 6px,color-mix(in srgb,var(--accent) 70%,transparent) 6px 12px)}
+.ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.7rem;color:var(--muted)}
+
+/* timeline */
+.timeline{display:grid;gap:0}
+.job{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;padding-block:22px;border-top:1px solid var(--line)}
+.job:last-child{border-bottom:1px solid var(--line)}
+.job .when{font-family:var(--mono);font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.job-body{display:grid;gap:8px;min-width:0}
+.job-title{font-family:var(--display);font-weight:700;font-size:1.15rem}
+.job-org{color:var(--muted);font-size:.95rem}
+.job ul{margin:0;padding-left:18px;display:grid;gap:4px;max-width:70ch;font-size:.95rem}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.skill-col{display:grid;gap:10px;align-content:start;min-width:0}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.82rem;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+
+/* creds */
+.creds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.creds ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.creds li{display:grid;gap:2px}
+.creds li span{font-size:.85rem;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border-radius:16px;padding:36px clamp(20px,4vw,48px);display:grid;gap:20px}
+.contact h2{color:var(--bg)}
+.contact p{color:color-mix(in srgb,var(--bg) 78%,transparent)}
+.contact-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.email{font-family:var(--mono);font-size:1rem;padding:10px 14px;border-radius:8px;background:color-mix(in srgb,var(--bg) 12%,transparent);user-select:all;word-break:break-all}
+.contact .btn.primary{background:var(--ok);border-color:var(--ok);color:#06232A}
+.contact .btn.ghost{color:var(--bg);border-color:color-mix(in srgb,var(--bg) 50%,transparent)}
+.foot{font-size:.8rem;color:var(--muted);text-align:center}
+
+@media (max-width:860px){
+  .hero,.case{grid-template-columns:minmax(0,1fr)}
+  .bridge,.skills,.creds{grid-template-columns:minmax(0,1fr)}
+  .numbers{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .num:nth-child(3){padding-left:0;border-left:0}
+  .num:nth-child(n+3){border-top:1px solid var(--line)}
+  .job{grid-template-columns:minmax(0,1fr);gap:6px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head><body>
+
+<div class="wrap">
+
+  <header class="top">
+    <span class="status"><span class="dot" aria-hidden="true"></span>Open to Senior PM roles · Dubai &amp; Abu Dhabi · Available now</span>
+    <nav class="toplinks" aria-label="Sections">
+      <a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div class="id"><img class="photo" src="data:image/jpeg;base64,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" alt="Harinder Kaur" width="96" height="96"><div class="id-text"><span class="label">Technical Product Manager · 9+ years</span>
+      <h1>Harinder Kaur</h1></div></div>
+      <div class="role">Onboarding, identity verification, KYC &amp; credit risk for regulated fintech</div>
+      <p class="lede">I build the products that let lenders and banks <strong>say yes to more customers without taking on more risk</strong>. I have shipped identity and credit products across <strong>India, the Philippines, Mexico and Brazil</strong>, each under a different regulator, and I'm now looking to bring that to UAE digital banks, wallets and payment companies.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/harinderkaur0303" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <aside class="check" aria-label="Profile summary">
+      <div class="check-head">
+        <span class="label">Fit check</span>
+        <span class="mono" style="font-size:.8rem;color:var(--muted)">UAE fintech PM</span>
+      </div>
+      <div class="check-row">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.5" fill="var(--accent-soft)"/><path class="tick" d="M5 9.4l2.6 2.6L13 6.4" fill="none" stroke="var(--ok)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="20"/></svg>
+        <div><b>Identity &amp; KYC</b><span>eKYC on national ID rails (Aadhaar, PhilSys)</span></div>
+      </div>
+      <div class="check-row">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.5" fill="var(--accent-soft)"/><path class="tick" d="M5 9.4l2.6 2.6L13 6.4" fill="none" stroke="var(--ok)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="20"/></svg>
+        <div><b>Credit risk</b><span>Scoring and decisioning for thin-file borrowers</span></div>
+      </div>
+      <div class="check-row">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.5" fill="var(--accent-soft)"/><path class="tick" d="M5 9.4l2.6 2.6L13 6.4" fill="none" stroke="var(--ok)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="20"/></svg>
+        <div><b>Regulation</b><span>RBI · BSP · DPDP Act · PMLA · RA 10173</span></div>
+      </div>
+      <div class="check-row">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.5" fill="var(--accent-soft)"/><path class="tick" d="M5 9.4l2.6 2.6L13 6.4" fill="none" stroke="var(--ok)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="20"/></svg>
+        <div><b>Markets</b><span>India · Philippines · Mexico · Brazil</span></div>
+      </div>
+      <div class="check-row">
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8.5" fill="var(--accent-soft)"/><path class="tick" d="M5 9.4l2.6 2.6L13 6.4" fill="none" stroke="var(--ok)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="20"/></svg>
+        <div><b>Technical depth</b><span>APIs, SQL, ETL, AI/ML acceptance criteria</span></div>
+      </div>
+      <div class="verdict"><span>Ready to relocate to the UAE</span><span class="mono">STATUS: OPEN</span></div>
+    </aside>
+  </section>
+
+  <section class="numbers" aria-label="Key numbers">
+    <div class="num"><strong>1M+</strong><span>users on the credit and identity products I owned</span></div>
+    <div class="num"><strong>4</strong><span>markets shipped, each with its own regulator</span></div>
+    <div class="num"><strong>~20%</strong><span>higher loan approvals for rural borrowers (Grameen Score)</span></div>
+    <div class="num"><strong>~40%</strong><span>less manual verification for lenders (Grameen Score)</span></div>
+  </section>
+
+  <section class="sec" aria-labelledby="why">
+    <div class="sec-head">
+      <span class="label">Why the UAE</span>
+      <h2 id="why">The problems I've solved are the problems UAE fintech is solving now</h2>
+      <p class="lede">The UAE is building fast digital onboarding on national ID, extending credit to customers with little local history, and serving a population from dozens of countries. I've worked on each of these.</p>
+    </div>
+    <div class="bridge">
+      <div class="bridge-item">
+        <div class="pair"><span class="chip">Aadhaar · PhilSys</span><span class="arrow">→</span><span class="chip gold">Emirates ID · UAE Pass</span></div>
+        <h3>Digital onboarding on national ID</h3>
+        <p>I integrated eKYC with India's UIDAI and NSDL gateways and adapted it for the Philippines' PhilSys. Building onboarding on Emirates ID is the same kind of work.</p>
+      </div>
+      <div class="bridge-item">
+        <div class="pair"><span class="chip">Thin-file India</span><span class="arrow">→</span><span class="chip gold">New-to-country</span></div>
+        <h3>Credit for people with little history</h3>
+        <p>Grameen Score turned SHG and microfinance repayment records into a bureau-style score. Many UAE residents are new to the country and have no local credit history, which is the same underlying problem.</p>
+      </div>
+      <div class="bridge-item">
+        <div class="pair"><span class="chip">RBI · BSP</span><span class="arrow">→</span><span class="chip gold">CBUAE</span></div>
+        <h3>Compliance as a product decision</h3>
+        <p>I translated RBI, BSP and data-privacy rules into product requirements across markets. I'm used to working with compliance teams to balance regulatory requirements against customer friction.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="work" aria-labelledby="work-h">
+    <div class="sec-head">
+      <span class="label">Selected work · Blackbuck Insights for TransUnion</span>
+      <h2 id="work-h">Case studies</h2>
+    </div>
+
+    <article class="case">
+      <div class="case-text">
+        <div class="case-meta"><span>Technical Product Manager</span><span>Apr 2025 – Jan 2026</span><span>India</span></div>
+        <h3>Grameen Credit Score: a credit identity for rural borrowers</h3>
+        <div><h4>Problem</h4><p>Hundreds of millions of rural and semi-urban borrowers in India repay loans reliably through Self-Help Groups and microfinance institutions, yet have no bureau score. Without one, they can't get formal loans.</p></div>
+        <div><h4>What I did</h4>
+          <ul>
+            <li>Owned the Phase 1 backlog across data, AI/ML, engineering and lender-partner workstreams</li>
+            <li>Defined model acceptance criteria: score distributions, drift thresholds, accuracy benchmarks, and calibration to bureau-comparable ranges</li>
+            <li>Set up a flag-and-recheck loop with the ML team to validate scores against real repayment outcomes</li>
+            <li>Led go-live readiness through to the first lender queries in production</li>
+          </ul>
+        </div>
+      </div>
+      <div class="case-visual">
+        <div class="panel">
+          <span class="label">How the product works</span>
+          <div class="pipe">
+            <div class="step"><b>01 · SOURCE</b>SHG / MFI repayment records</div>
+            <div class="step"><b>02 · TRANSFORM</b>ETL + AI/ML model</div>
+            <div class="step score"><b>03 · SCORE</b>Grameen Score, 0–850</div>
+            <div class="step"><b>04 · DELIVER</b>Score API</div>
+            <div class="step"><b>05 · DECIDE</b>NBFC / MFI lender</div>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="label">Phase 1 outcomes</span>
+          <div class="outcomes">
+            <div class="outcome"><strong>~20%</strong><span>higher loan approval rates</span></div>
+            <div class="outcome"><strong>~40%</strong><span>less manual field verification</span></div>
+            <div class="outcome"><strong>0</strong><span>critical defects at go-live</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-text">
+        <div class="case-meta"><span>Product Owner role → Technical Product Manager</span><span>2023 – Sep 2024</span><span>India · Philippines · Mexico</span></div>
+        <h3>Identity verification platform: expanding from India to the Philippines</h3>
+        <div><h4>Problem</h4><p>Identity fraud is the biggest barrier to lending at scale. India and the Philippines needed fast, compliant identity verification, but their ID systems, regulators and privacy laws are very different.</p></div>
+        <div><h4>What I did</h4>
+          <ul>
+            <li>Validated India integrations with UIDAI and NSDL, in line with RBI KYC Master Directions and the DPDP Act 2023</li>
+            <li>Surfaced 15+ requirement gaps before sprints started, avoiding late engineering rework</li>
+            <li>Ran the India vs Philippines gap analysis and documented what had to be rebuilt for each market</li>
+            <li>Coordinated the Philippines go-live against BSP Circular 1148 checkpoints</li>
+          </ul>
+        </div>
+      </div>
+      <div class="case-visual">
+        <div class="panel">
+          <span class="label">Same product, two markets</span>
+          <div class="tbl">
+            <table>
+              <thead><tr><th></th><th>India</th><th>Philippines</th></tr></thead>
+              <tbody>
+                <tr><td>National ID</td><td>Aadhaar</td><td>PhilSys</td></tr>
+                <tr><td>Regulator</td><td>RBI</td><td>BSP</td></tr>
+                <tr><td>Privacy law</td><td>DPDP Act 2023</td><td>RA 10173</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="bar">
+            <div class="bar-top"><span>Core API, matching engine, risk rules</span><span class="mono">65–90% reused</span></div>
+            <div class="track" role="img" aria-label="65 to 90 percent reused"><div class="fill range" style="left:65%;width:25%"></div><div class="fill" style="left:0;width:65%"></div></div>
+          </div>
+          <div class="bar">
+            <div class="bar-top"><span>Regulatory logic</span><span class="mono">~20% portable</span></div>
+            <div class="track" role="img" aria-label="About 20 percent portable"><div class="fill gold" style="left:0;width:20%"></div></div>
+            <div class="ticks"><span>0%</span><span>50%</span><span>100%</span></div>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="label">Outcomes</span>
+          <div class="outcomes">
+            <div class="outcome"><strong>+10%</strong><span>identity-resolution accuracy</span></div>
+            <div class="outcome"><strong>0</strong><span>P1 defects in the first 30 days (Philippines)</span></div>
+            <div class="outcome"><strong>15+</strong><span>requirement gaps caught before sprints</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="case-text">
+        <div class="case-meta"><span>Technical Product Manager</span><span>Apr 2024 – Jan 2026</span><span>India · Brazil · Philippines</span></div>
+        <h3>CreditVision v4: credit decisioning across three markets</h3>
+        <div><h4>Problem</h4><p>Fragmented credit data pipelines and inconsistent decision workflows were slowing lender onboarding and making it hard to scale credit products reliably.</p></div>
+        <div><h4>What I did</h4>
+          <ul>
+            <li>Owned and prioritised a roadmap of 20+ features using RICE and WSJF</li>
+            <li>Translated regulatory and market requirements for India, Brazil and the Philippines into sprint-ready specs</li>
+            <li>Led delivery across 45+ engineers, data scientists, compliance and business stakeholders</li>
+            <li>Worked with data and engineering on API-driven credit verification services</li>
+          </ul>
+        </div>
+      </div>
+      <div class="case-visual">
+        <div class="panel">
+          <span class="label">Sprint predictability</span>
+          <div class="bar">
+            <div class="bar-top"><span>Before</span><span class="mono">~60%</span></div>
+            <div class="track" role="img" aria-label="About 60 percent"><div class="fill gold" style="left:0;width:60%"></div></div>
+          </div>
+          <div class="bar">
+            <div class="bar-top"><span>After</span><span class="mono">~85%</span></div>
+            <div class="track" role="img" aria-label="About 85 percent"><div class="fill" style="left:0;width:85%"></div></div>
+            <div class="ticks"><span>0%</span><span>50%</span><span>100%</span></div>
+          </div>
+        </div>
+        <div class="panel">
+          <span class="label">Outcomes</span>
+          <div class="outcomes">
+            <div class="outcome"><strong>25%</strong><span>faster delivery turnaround</span></div>
+            <div class="outcome"><strong>1M+</strong><span>users across 3 markets</span></div>
+            <div class="outcome"><strong>$2M+</strong><span>revenue supported by the product suite</span></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="sec" id="experience" aria-labelledby="exp-h">
+    <div class="sec-head">
+      <span class="label">Experience</span>
+      <h2 id="exp-h">From quality and delivery into product</h2>
+      <p class="lede">I started out in requirements, release engineering and quality. That's why I catch API and data edge cases before they reach production.</p>
+    </div>
+    <div class="timeline">
+      <div class="job">
+        <div class="when">Apr 2024 – Jan 2026</div>
+        <div class="job-body">
+          <div class="job-title">Technical Product Manager</div>
+          <div class="job-org">Blackbuck Insights, Bengaluru · Client: TransUnion</div>
+          <ul>
+            <li>Owned identity verification, KYC and credit risk products across four markets</li>
+            <li>Led Grameen Credit Score and CreditVision v4 (see case studies)</li>
+            <li>Awarded BBI Spot Award (Q2 2024) and BBI Core Value Award (Q4 2024)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2023 – Mar 2024</div>
+        <div class="job-body">
+          <div class="job-title">Senior QA Engineer (Product Owner role)</div>
+          <div class="job-org">Blackbuck Insights, Bengaluru · Client: TransUnion</div>
+          <ul>
+            <li>Improved identity-resolution accuracy by 10% across India, Mexico and the Philippines</li>
+            <li>Built validation frameworks for API, ETL and batch data flows</li>
+            <li>Acted as the main bridge between product and engineering, which led to my move into product ownership</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2020 – 2023</div>
+        <div class="job-body">
+          <div class="job-title">Product Analyst, Product Quality &amp; Delivery</div>
+          <div class="job-org">Legato Health Technologies (now Carelon), Bengaluru · Client: Anthem Inc.</div>
+          <ul>
+            <li>Defined release-readiness criteria for Agile releases of healthcare platforms</li>
+            <li>Validated requirements across APIs, UI workflows and integrated systems</li>
+            <li>Mentored 5–7 team members</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2016 – 2020</div>
+        <div class="job-body">
+          <div class="job-title">Business Analyst, Automation &amp; Release Engineering</div>
+          <div class="job-org">Capgemini India, Bengaluru · Client: Carnival Corporation</div>
+          <ul>
+            <li>Defined release requirements and acceptance criteria with engineering</li>
+            <li>Ran defect triage and release-quality reporting through JIRA and CI/CD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="skills-h">
+    <div class="sec-head"><span class="label">Toolkit</span><h2 id="skills-h">Skills</h2></div>
+    <div class="skills">
+      <div class="skill-col"><h3>Product</h3><div class="tags">
+        <span class="tag">Roadmapping (RICE, WSJF)</span><span class="tag">Backlog prioritisation</span><span class="tag">OKRs &amp; KPIs</span><span class="tag">Product analytics</span><span class="tag">Stakeholder management</span><span class="tag">Agile / Scrum / SAFe</span><span class="tag">Go-to-market</span></div></div>
+      <div class="skill-col"><h3>Fintech domain</h3><div class="tags">
+        <span class="tag">KYC / eKYC</span><span class="tag">Identity verification</span><span class="tag">Credit risk &amp; scoring</span><span class="tag">Lending</span><span class="tag">Risk-vs-friction design</span><span class="tag">Financial inclusion</span><span class="tag">Multi-market compliance</span></div></div>
+      <div class="skill-col"><h3>Technical</h3><div class="tags">
+        <span class="tag">SQL</span><span class="tag">API integrations</span><span class="tag">ETL &amp; data validation</span><span class="tag">AI/ML acceptance criteria</span><span class="tag">JIRA &amp; Confluence</span><span class="tag">Figma &amp; Miro</span><span class="tag">GitHub &amp; CI/CD</span></div></div>
+    </div>
+  </section>
+
+  <section class="creds" aria-label="Education, certifications and awards">
+    <div><span class="label">Education</span><ul style="margin-top:10px">
+      <li>B.E., Electronics &amp; Communication<span>Nitte Meenakshi Institute of Technology (VTU) · 2012 – 2016</span></li></ul></div>
+    <div><span class="label">Certifications</span><ul style="margin-top:10px">
+      <li>Certified Scrum Product Owner (CSPO)<span>Scrum Alliance · valid to 2027</span></li>
+      <li>Scrum Foundation Professional Certificate<span>CertiProf</span></li></ul></div>
+    <div><span class="label">Awards</span><ul style="margin-top:10px">
+      <li>BBI Spot Award<span>Blackbuck Insights · Q2 2024</span></li>
+      <li>BBI Core Value Award<span>Blackbuck Insights · Q4 2024</span></li></ul></div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Let's talk</h2>
+    <p>I'm looking for Senior PM and Lead PM roles in onboarding, identity, payments and credit at UAE digital banks, wallets, BNPL and payment companies. I'm based in Bengaluru, available now, and ready to relocate to Dubai or Abu Dhabi.</p>
+    <div class="contact-row">
+      <span class="email" id="email">harinderkr249@gmail.com</span>
+      <button class="btn primary" id="copy" type="button">Copy email</button>
+      <a class="btn ghost" href="https://www.linkedin.com/in/harinderkaur0303" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
+
+  <p class="foot">Harinder Kaur · Technical Product Manager · Bengaluru, India</p>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var btn=this, text=document.getElementById('email').textContent;
+  function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy email'},1800)}
+  function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press Ctrl+C'}
+  try{navigator.clipboard.writeText(text).then(done,fallback)}catch(e){fallback()}
+});
+</script>
+</body></html>
